@@ -47,6 +47,11 @@ Návrh topológie je znázornený v obrázku nižšie. Topológia sa skladá zo 
 Topológiu budeme testovať podľa článku [6], kde testovanie prebiehalo nasledovne [6]:
 Generátor premávky GEESE bol spustený po stabilizácii siete. Sieťové zlyhania boli generované 60 sekúnd po začiatku emulácie (náhodné vypnutie linku pomocou linuxového príkazu). Menili sa parametre ako počet koncových zariadení, počet prepínačov a počet koncových zariadení pre multicast skupinu.
 
+## <h2> Zhrnutie
+V návrhu boli vysvetlené základné pojmy, ktoré sa vyskytujú v článku a budú sa vyskytovať aj v dokumentácií. Bolo spomenuté aj testovanie, ktoré bude súčasťou vypracovania semestrálneho zadania. 
+
+Pre nedostatok podkladov k algoritmom využitých v ARES frameworku sme sa rozhodli vypracovať obmenené zadanie a neskôr ho porovnať s hodnotami, ktoré sú uvedené v článku - získané pomocou implementácie ARESu. Naším riešením bude implementácia RSTP, prípadne modernejšieho RSTP protokolu, ktorý otestujeme podľa vyššie spomenutej kapitoly Testovanie, na topológií z článku [6]. Taktiež plánujeme využiť GEESE, generátor sieťovej premávky, ako aj autorky článku. Chceli by sme otestovať minimálne nezaťaženú sieť (4 switche), mierne zaťaženú sieť (8 switchov) a zaťaženú sieť (12 switchov).
+
 ## <h2> Literatúra
 [1] https://github.com/mininet/mininet/wiki/Introduction-to-Mininet#what
 
