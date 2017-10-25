@@ -21,7 +21,9 @@ Maximálny čas, kedy konverguje STP je 50s, čo je pre praktické situácie ve�
 Na rozdiel od STP všetky prepínače generujú BPDU rámce a posielajú ich na všetky porty. Tiež sa definuje typ pre linky (point-to-point, edge, shared). [4] 
 ### <h3> GEESE generátor premávky
 Generátor GEESE bol vytvorený na generovanie GOOSE premávky (využívanej v IEC 61850 komunikačných sieťach pre kontrolu a ochranu). GEESE bol navrhnutý a implementovaný s ohľadom na rôzne parametre, ktoré sú dôležité pri definovaní premávkového modelu GOOSE. [5]
-![GOOSE paket štruktúra](goose.PNG)
+
+![GOOSE paket štruktúra](goose.png)
+
 Generátor bol vyvinutý pomocou Scapy (voľne dostupného softvéru pre zachytávanie paketov), pričom môže byť použitý na reálnych zariadeniach alebo v simulátoroch či emulátoroch. [5]
 ### <h3> Mininet
 Mininet je sieťový emulátor. Umožňuje vytvárať koncové zariadenia, prepínače, smerovače a linky medzi nimi na jednom Linuxovom kernely. Mininet host sa správa rovnako ako reálna mašina a je možné sa naň pripojiť pomocou SSH. Čo sa týka OpenFlow kontrolerov, Mininet je veľmi flexibilný a umožňuje pridať do simulácie množstvo typov kontrolerov. [1]
