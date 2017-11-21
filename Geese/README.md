@@ -8,7 +8,7 @@ Pre naše účely bol v priečinku: /home/mininet/mininet
 * mať spustenú topológiu
 * do topológie zadať príkaz `xterm xx` (xx predstavujú názov hosta alebo switcha)
 * prejsť do priečinka, kde sa nachádza súbor geese_final.py
-* cez xterm príkazový riadok spustiť príkazom: sudo `python geese_final.py` generátor trafiky.
+* cez xterm príkazový riadok spustiť príkazom: `sudo python geese_final.py` generátor trafiky.
 Po poslednom príkaze sa zobrazí nasledovné používateľské rozhranie: 
 
 ![GOOSE používateľské rozhranie](goose.png)
