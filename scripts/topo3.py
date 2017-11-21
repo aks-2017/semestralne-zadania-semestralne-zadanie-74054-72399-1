@@ -35,7 +35,7 @@ if "__main__" == __name__:
 	s11 = net.addSwitch("s11",dpid="0000000000000012") 
       
 	net.addLink(s1,h0)
-	net.addLink(s3,h1)
+	net.addLink(s2,h1)
 	net.addLink(s3,h2)
 	net.addLink(s4,h3)
 	net.addLink(s6,h4)
@@ -43,7 +43,7 @@ if "__main__" == __name__:
 	net.addLink(s8,h6)
 	net.addLink(s9,h7)
 	net.addLink(s10,h8)
-	net.addLink(s10,h9)
+	net.addLink(s11,h9)
 	
 	net.addLink(s0,s1)
 	net.addLink(s1,s2)
