@@ -1,6 +1,8 @@
 #!/usr/bin/python
 
 #run me like one of your french girl:  sudo -E python topo2.py
+#ryu-manager simple_switch_igmp_13.py
+#vypnutie int ip link set dev sxx-ethx down
 
 from mininet.cli import CLI
 from mininet.net import Mininet
@@ -21,14 +23,14 @@ if "__main__" == __name__:
 	h8 = net.addHost("h8", mac="00:00:00:00:00:09", ip="10.0.0.9/24")
 	h9 = net.addHost("h9", mac="00:00:00:00:00:10", ip="10.0.0.10/24")
       
-	s0 = net.addSwitch("s0",dpid="0000000000000001")    
-	s1 = net.addSwitch("s1",dpid="0000000000000002")    
-	s2 = net.addSwitch("s2",dpid="0000000000000003") 
-	s3 = net.addSwitch("s3",dpid="0000000000000004") 
-	s4 = net.addSwitch("s4",dpid="0000000000000005") 
-	s5 = net.addSwitch("s5",dpid="0000000000000006") 
-	s6 = net.addSwitch("s6",dpid="0000000000000007") 
-	s7 = net.addSwitch("s7",dpid="0000000000000008") 
+	s0 = net.addSwitch("s0",dpid="0000000000000001",protocols="OpenFlow13")    
+	s1 = net.addSwitch("s1",dpid="0000000000000002",protocols="OpenFlow13")    
+	s2 = net.addSwitch("s2",dpid="0000000000000003",protocols="OpenFlow13") 
+	s3 = net.addSwitch("s3",dpid="0000000000000004",protocols="OpenFlow13") 
+	s4 = net.addSwitch("s4",dpid="0000000000000005",protocols="OpenFlow13") 
+	s5 = net.addSwitch("s5",dpid="0000000000000006",protocols="OpenFlow13") 
+	s6 = net.addSwitch("s6",dpid="0000000000000007",protocols="OpenFlow13") 
+	s7 = net.addSwitch("s7",dpid="0000000000000008",protocols="OpenFlow13") 
       
 	net.addLink(s0,h0)
 	net.addLink(s0,h1)
@@ -56,6 +58,42 @@ if "__main__" == __name__:
 	for x in range(0,8):
 		cmd = "ovs-vsctl set bridge s%d rstp_enable=true" % (x)
 		c0.cmd(cmd)
+	
+	#1. multicast group h0+h1 - 225.0.0.1
+	h0 = net.get('h0')
+	cmd="ip route add 225.0.0.1 dev h0-eth0"
+	h0.cmd(cmd)
+	h1 = net.get('h1')
+	cmd="ip route add 225.0.0.1 dev h1-eth0"
+	h1.cmd(cmd)
+	#2. multicast group h2+h3 - 225.0.0.2
+	h2 = net.get('h2')
+	cmd="ip route add 225.0.0.2 dev h2-eth0"
+	h2.cmd(cmd)
+	h3 = net.get('h3')
+	cmd="ip route add 225.0.0.2 dev h3-eth0"
+	h3.cmd(cmd)
+	#3. multicast group h4+h5 - 225.0.0.3
+	h4 = net.get('h4')
+	cmd="ip route add 225.0.0.3 dev h4-eth0"
+	h4.cmd(cmd)
+	h5 = net.get('h5')
+	cmd="ip route add 225.0.0.3 dev h5-eth0"
+	h5.cmd(cmd)
+	#4. multicast group h6+h7 - 225.0.0.4
+	h6 = net.get('h6')
+	cmd="ip route add 225.0.0.4 dev h6-eth0"
+	h6.cmd(cmd)
+	h7 = net.get('h7')
+	cmd="ip route add 225.0.0.4 dev h7-eth0"
+	h7.cmd(cmd)
+	#5. multicast group h8+h9 - 225.0.0.5
+	h8 = net.get('h8')
+	cmd="ip route add 225.0.0.5 dev h8-eth0"
+	h8.cmd(cmd)
+	h9 = net.get('h9')
+	cmd="ip route add 225.0.0.5 dev h9-eth0"
+	h9.cmd(cmd)
 	
 	CLI(net)
 	net.stop
