@@ -1,7 +1,30 @@
 # <h1> ARES: An Autonomic and Resilient Framework for Smart Grids
 
 ## <h2> Abstrakt
+V inteligentných sieťach si široké používanie distribuovaných energetických zrojov (DER) vyžaduje bezpečné a spoľahlivé riešenia,
+podobné tým, ktoré sa používajú v sieťach vysokého napätia. Vstupom občasných DER zariadení, ako napríklad solárnych panelov medzi takéto siete vyžaduje taktiež viac autonómnu a dynamickú SCADA sieť. Bohužiaľ, doteraz predstavené riešenia nespĺňajú podmienky
+pre tieto siete. Preto je ako riešenie predstavený framework ARES, ktorý poskytuje pružnú, robustnú a flexibilnú komunikáciu
+pre inteligentné siete so softvérovo definovanými sieťami. Taktiež zahŕňa autonómne služby pre SCADA, ktoré môžu zlepšovať aplikácie
+inteligentných sietí - ich výkon a efektívnosť. ARES bol testovaný pomocou Mininetu a RYU controllera, a predstavuje maximálny čas 
+obnovy 610 mikrosekúnd, čo je značné vylepšenie iných, predstavených riešení. Navyše ARES je transparentný pre koncové zariadenia, 
+pričom si zachováva kompatibilitu so známymi meraniami a riadiacimi zariadeniami.
+
+
 ## <h2> Úvod
+Cieľom práce, v ktorej bol predstavený framework ARES bolo vyplniť medzeru v riešeniach pre čoraz viac sa rozširujúce inteligentné
+siete, ktoré sa stávajú náhradou dnes bežných elektrických vedení, pričom sa autori chceli zamerať hlavne na bezpečnosť a spoľahlivosť 
+takéhoto riešenia.
+
+ARES teda vykonáva obnovavanie zo zlyhania (failure recovery) v reálnom čase, pričom zlyhania v sieti nahlasuje SCADA-NG, kde už 
+priamo zobrazuje cestu obnovenia a konkrétne zlyhané zariadenie alebo linku. Okrem toho však automaticky identifikuje pripojené
+a odpojené zariadenia, ktoré taktiež nahlasuje SCADA-NG, ktorá stojí nad týmto frameworkom. Takéto riešenie ponúka škálovateľnosť 
+a jednoduchosť. Taktiež ponúka vylepšenie samostatnosti siete, vďaka automatizovanej konfigurácií zariadení, ktoré sa pripoja do siete.
+
+Jeho najväčším príspevkom však ostáva znížený čas obnovy zo zlyhania, ktorý dosahuje len niekoľko mikrosekúnd, teda čas oveľa nižší
+ako potrebuje jeden z najznámejších protokolov- RSTP.
+
+
+
 ## <h2> Analýza
 Súčasťou analýzy projektu bude protokol OpenFlow, kontrolér Ryu, protokol RSTP, GEESE generátor premávky a emulačný nástroj mininet.
 ### <h3> OpenFlow
