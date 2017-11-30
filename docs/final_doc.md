@@ -1,14 +1,9 @@
 # <h1> ARES: An Autonomic and Resilient Framework for Smart Grids
 
 ## <h2> Abstrakt
-V inteligentných sieťach si široké používanie distribuovaných energetických zrojov (DER) vyžaduje bezpečné a spoľahlivé riešenia,
-podobné tým, ktoré sa používajú v sieťach vysokého napätia. Vstupom občasných DER zariadení, ako napríklad solárnych panelov medzi takéto siete vyžaduje taktiež viac autonómnu a dynamickú SCADA sieť. Bohužiaľ, doteraz predstavené riešenia nespĺňajú podmienky
-pre tieto siete. Preto je ako riešenie predstavený framework ARES, ktorý poskytuje pružnú, robustnú a flexibilnú komunikáciu
-pre inteligentné siete so softvérovo definovanými sieťami. Taktiež zahŕňa autonómne služby pre SCADA, ktoré môžu zlepšovať aplikácie
-inteligentných sietí - ich výkon a efektívnosť. ARES bol testovaný pomocou Mininetu a RYU controllera, a predstavuje maximálny čas 
-obnovy 610 mikrosekúnd, čo je značné vylepšenie iných, predstavených riešení. Navyše ARES je transparentný pre koncové zariadenia, 
-pričom si zachováva kompatibilitu so známymi meraniami a riadiacimi zariadeniami.
-
+Pri hľadaní riešení v rámci inteligentných sietí, ktoré postupne nahrádzajú dnešné elektrické vedenia a teda sa rýchlo rozširujú, bol
+predstavený ako jeden z nich framework ARES. Tento framework, ktorý predstavuje pružnú, robustnú a flexibilnú komunikáciu, navyše 
+splňuje časové kritériá pre čas pre obnovu zo zlyhania, ktorá je v takýchto situáciách kritická. Nakoľko nás výsledky tejto práce zaujali, rozhodli sme sa experiment zopakovať a overiť tak výsledky predstavené v práci autoriek. 
 
 ## <h2> Úvod
 Cieľom práce, v ktorej bol predstavený framework ARES bolo vyplniť medzeru v riešeniach pre čoraz viac sa rozširujúce inteligentné
